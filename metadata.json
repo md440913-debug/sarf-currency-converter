@@ -1,0 +1,6 @@
+{
+  "name": "Sarf — Currency Converter",
+  "description": "Fast, mobile-first bilingual (Arabic RTL & English) currency converter using indicative daily reference rates from Frankfurter, with 30-day history, saved favorites, and exchange offer check.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

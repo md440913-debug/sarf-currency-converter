@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-sans-en: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-sans-ar: "IBM Plex Sans Arabic", "Plus Jakarta Sans", sans-serif;
+    --font-mono-num: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+  }
+
+  html {
+    font-family: var(--font-sans-en);
+    scroll-behavior: smooth;
+  }
+
+  html[dir="rtl"] {
+    font-family: var(--font-sans-ar);
+  }
+
+  .font-mono-num {
+    font-family: var(--font-mono-num);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Touch targets: minimum 44px on controls and nav/footer links (parity with tested v1.3 build) */
+button, select, [role="button"], [role="tab"] { min-height: 44px; }
+header a, nav a, footer a { display: inline-flex; align-items: center; min-height: 44px; padding-block: 0; }
